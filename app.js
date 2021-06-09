@@ -5,7 +5,14 @@ const helpers = require('./helpers');
 
 // Configurações
 const app = express();
-app.use('/', router);
+
+// helpers antes da definição das rotas
+app.use((req, res, next) => {
+    res.locals.h = helpers;
+    next();
+});
+
+app.use('/', router);       // Definição das rotas
 
 app.use(express.json());  // Trata agora as req via POST
 

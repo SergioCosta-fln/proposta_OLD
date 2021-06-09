@@ -1,7 +1,19 @@
 <html>
     <head>
-        <title>{{pageTitle}}</title>
+        {{#pageTitle}}
+            <title>{{pageTitle}}</title>
+        {{/pageTitle}}    
+        {{^pageTitle}}
+            <title>{{h.defaultPageTitle}}</title>
+        {{/pageTitle}}    
     </head>
-</html>
-<h1>Cabeçalho</h1>
-<hr/>
+    <body>
+        <h1>Cabeçalho</h1>
+        <hr/>
+        <ul>
+            {{#h.menu}}
+            <li><a href="{{slug}}">{{name}}</a></li>
+            {{/h.menu}}
+        </ul>
+    </body>
+</html>    
