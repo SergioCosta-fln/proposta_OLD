@@ -1,0 +1,7 @@
+<html>
+    <head>
+        <title>{{pageTitle}}</title>
+    </head>
+</html>
+<h1>Cabeçalho</h1>
+<hr/>
