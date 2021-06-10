@@ -1,4 +1,4 @@
-exports.defaultPageTitle = 'Propostas Digitais';
+exports.defaultPageTitle = 'Projeto Node';
 
 exports.menu = [
     {name:'Home', slug:'/'},

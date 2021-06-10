@@ -12,9 +12,10 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/', router);       // Definição das rotas
-
 app.use(express.json());  // Trata agora as req via POST
+
+app.use('/', router);       // Definição das rotas 
+
 
 app.engine('mst', mustache(__dirname + '/views/partials', '.mst'));
 
